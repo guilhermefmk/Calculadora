@@ -1,41 +1,22 @@
-function soma(a,b,interface){
-    return resultado(parseInt(a) + parseInt(b), interface);
-}
-function subtracao(a,b,interface){
-    return resultado(parseInt(a) - parseInt(b), interface);
-}
-function divisao(a,b,interface){
-    return resultado(parseInt(a) / parseInt(b), interface);
-}
-function multiplicacao(a,b,interface){
-    return resultado(parseInt(a) * parseInt(b), interface);
-}
-function resultado(result) {
-    interface.innerHTML = '<h1>O resultado é ' + result;
-}
 
-function verifica(){
-    let operador = document.getElementById('op').value;
-    let primeiroNumero = document.getElementById('1num').value;
-    let segundoNumero = document.getElementById('2num').value;
-    var interface = document.getElementById('interface');
-    switch (operador) {
-        case '+':
-            soma(primeiroNumero, segundoNumero, interface);
-            break;
-        case '-':
-            subtracao(primeiroNumero, segundoNumero, interface);
-            break; 
-        case '/':
-            divisao(primeiroNumero, segundoNumero, interface);
-            break; 
-        case '*':
-            multiplicacao(primeiroNumero, segundoNumero, interface);
-            break;       
-        default:
-            print("Operador inválido");
-            break;
+function resultado(result) {
+    var interface = document.getElementById('resultado');
+    interface.innerHTML += '<h1>' + result + '</h1>';
+}
+function alterastring(add){
+    let input = document.getElementById('calc');
+    let len = input.length;
+    if (add == "C"){
+        input.value = "";
+    }else if(add == "<"){
+        input.value = input.value.slice(0, -1);
+    }else{
+        input.value += add;
     }
+}
+function verifica(){
+    var string = document.getElementById('calc').value;
+    resultado(eval(string));
 }
 
 

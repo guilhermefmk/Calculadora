@@ -5,23 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link href="/Calculadora/style.css" rel="stylesheet">
 </head>
 <body>
-    <container id="formulario">
-    <form id="form1">
-        <label for="1num">Primeiro número:</label>
-        <input type="number" id="1num" name="1num"><br><br>
-        <label for="op">Operador: </label>
-        <input type="text" id="op" name="op"><br><br>
-        <label for="2num">Segundo número:</label>
-        <input type="number" id="2num" name="2num">
-    </form><br>
-    <button onclick="verifica()">Submit</button>
-    </container>
-    <container id="interface"></container>  
-    <h2></h2>
+    <div class="fundo">
+        <h1>Guilherme Cunha</h1>
+        <div class="calculadora">
+            <h1>Calculadora </h1>
+            <form id="form1">
+                <label for="calc">Calc:</label>
+                <input type="text" id="calc" name="calc">
+            </form>
+            <p id="resultado"> = </p>
+            <br>
+            <table>
+                <tr>
+                    <td>
+                        <button onclick="alterastring('<')"><--</button>
+                        <button onclick="alterastring('C')">C</button>
+                        <button onclick="alterastring('+')">+</button>
+                        <button onclick="alterastring('-')">-</button>
+                        <button onclick="alterastring('/')">/</button>
+                        <button onclick="alterastring('*')">X</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="alterastring('1')">1</button>
+                        <button onclick="alterastring('2')">2</button>
+                        <button onclick="alterastring('3')">3</button>
+                        <button onclick="alterastring('4')">4</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="alterastring('5')">5</button>
+                        <button onclick="alterastring('6')">6</button>
+                        <button onclick="alterastring('7')">7</button>
+                        <button onclick="alterastring('8')">8</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="alterastring('9')">9</button>
+                        <button onclick="alterastring('0')">0</button>
+                        <button onclick="verifica()">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 <script src="/Calculadora/functions.js"></script>
-</script>
 </html>
